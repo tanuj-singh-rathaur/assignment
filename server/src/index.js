@@ -1,13 +1,19 @@
 const express = require("express");
 require("./db/mongoose");
+const cors = require("cors");
+
 const app = express();
 const userRouter = require("./routers/login");
-const port = process.env.PORT || 3000;
+const port = 4000;
+
+app.use(cors());
+
 app.use(express.json());
 
 app.get("/index", (req, res) => {
   res.send("hello");
 });
+
 app.use(userRouter);
 
 const server = app.listen(port, () => {
