@@ -1,6 +1,64 @@
 {
+
+
+
+  "scripts": {
+
+
+
+    "start": "node src/index.js",
+
+
+
+    "test": "mocha test/login-test.js"
+
+
+
+  },
+
+
+
   "devDependencies": {
+
+
+
     "chai": "^4.3.7",
+
+
+
+    "express": "^4.18.2",
+
+
+
     "mocha": "^10.2.0"
+
+
+
+  },
+
+
+
+  "dependencies": {
+
+
+
+    "jsonwebtoken": "^9.0.1",
+
+
+
+    "mongoose": "^7.4.3",
+
+
+
+    "supertest": "^6.3.3"
+
+
+
   }
+
+
+
 }
+
+
+
