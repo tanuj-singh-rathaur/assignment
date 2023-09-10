@@ -1,9 +1,10 @@
 const express = require("express");
-require("./db/mongoose");
 const cors = require("cors");
 
 const app = express();
-const userRouter = require("./routers/login");
+const userRouter = require("./routers/users.controller");
+const adminRouter = require("./routers/admin.controller");
+const publicRouter = require("./routers/public.controller");
 const port = 4000;
 
 app.use(cors());
@@ -15,6 +16,8 @@ app.get("/index", (req, res) => {
 });
 
 app.use(userRouter);
+app.use(adminRouter);
+app.use(publicRouter);
 
 const server = app.listen(port, () => {
   console.log("app is listening on port " + port);
